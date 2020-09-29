@@ -26,8 +26,8 @@ class Migration(migrations.Migration):
                 ('created_at', models.DateTimeField(auto_now_add=True)),
             ],
             options={
-                'verbose_name': 'Ürün',
-                'verbose_name_plural': 'Ürünler',
+                'verbose_name': 'Product',
+                'verbose_name_plural': 'Products',
             },
         ),
     ]

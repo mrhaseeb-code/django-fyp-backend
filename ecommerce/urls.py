@@ -4,6 +4,9 @@ from django.conf import settings
 from django.conf.urls.static import static
 from .views import home_page, contact_page
 
+admin.site.site_header = "Digital Art's Studio"
+admin.site.site_title = "Digital Art's Studio Admin Panel"
+admin.site.index_title = "Welcome to Digital Art's Studio Admin Panel"
 
 urlpatterns = [
     path('admin/', admin.site.urls),

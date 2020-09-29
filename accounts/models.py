@@ -7,9 +7,9 @@ from django.contrib.auth.models import (
 class UserManager(BaseUserManager):
     def create_user(self, email, password=None, first_name=None, last_name=None, is_active=True, is_staff=False, is_superuser=False):
         if not email:
-            raise ValueError('Users must have an email address')
+            raise ValueError('User must have an email address')
         if not password:
-            raise ValueError('Users must have a password')
+            raise ValueError('User must have a password')
 
         user_obj = self.model(
             email=self.normalize_email(email),
@@ -75,7 +75,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     )
 
     USERNAME_FIELD = 'email'    # username
-    # USERNAME_FIELD and password are required by default
+    # Both are required by default
     REQUIRED_FIELDS = []    # python manage.py createsuperuser
 
     objects = UserManager()

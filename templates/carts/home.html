@@ -30,11 +30,11 @@
             {% endfor %}
             <tr>
                 <td colspan="3"></td>
-                <td><b>Subtotal: </b> <span class="cart-subTotal">{{ cart.subtotal|floatformat:2|localize }}</span> ₺</td>
+                <td><b>Subtotal: </b> <span class="cart-subTotal">{{ cart.subtotal|floatformat:0|localize }}</span> PKR</td>
             </tr>
             <tr>
                 <td colspan="3"></td>
-                <td><b>Total: </b> <span class="cart-total">{{ cart.total|floatformat:2|localize }}</span> ₺</td>
+                <td><b>Total: </b> <span class="cart-total">{{ cart.total|floatformat:0|localize }}</span> PKR</td>
             </tr>
             <tr>
                 <td colspan="3"></td>

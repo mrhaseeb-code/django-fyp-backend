@@ -61,7 +61,7 @@ class Product(models.Model):
     title = models.CharField(max_length=50)
     slug = models.SlugField(blank=True)
     description = models.TextField()
-    price = models.DecimalField(max_digits=20, decimal_places=4, default=39.99)
+    price = models.DecimalField(max_digits=20, decimal_places=4, default=100)
     image = models.ImageField(upload_to=upload_image_path, null=True, blank=True)
     featured = models.BooleanField(default=False)
     active = models.BooleanField(default=False)
@@ -81,8 +81,8 @@ class Product(models.Model):
         return self.title
 
     class Meta:
-        verbose_name = "Ürün"
-        verbose_name_plural = "Ürünler"
+        verbose_name = "Package"
+        verbose_name_plural = "Packages"
 
 
 def product_pre_save_receiver(sender, instance, *args, **kwargs):

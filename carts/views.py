@@ -16,12 +16,12 @@ def cart_detail_api_view(request):
         'id': x.id,
         'url': x.get_absolute_url(),
         'title': x.title,
-        'price': format(x.price, '.2f')
+        'price': format(x.price)
     } for x in cart_obj.products.all()]
     cart_data = {
         'products': products,
-        'subTotal': format(cart_obj.subtotal, '.2f'),
-        'total': format(cart_obj.total, '.2f')
+        'subTotal': format(cart_obj.subtotal),
+        'total': format(cart_obj.total)
     }
     return JsonResponse(cart_data, status=200)
 
