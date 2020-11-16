@@ -12,7 +12,7 @@ Activate venv
 * Windows - venv\Scripts\activate
 
 # Clone & Install
-* git clone https://github.com/umutbektas/django-ecommerce.git
+* git clone https://github.com/mrhaseeb-code/django-fyp-backend.git
 * (venv) pip install -r requirements.txt
 
 # Migrate & User & Run
